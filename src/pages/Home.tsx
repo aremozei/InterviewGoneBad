@@ -19,7 +19,7 @@ const HomePage: React.FunctionComponent<RouteComponentProps<any>> = props => {
     const onSearch = async(text) => {
         const listOfRecepies = await Recepies.get("/", {
             params: {
-              apiKey:"a0f39ac111f54792993b751c3946eb54",
+              apiKey:"API HERE PLEASE",
               query: text,
               number: 30,
               addRecipeInformation: true
