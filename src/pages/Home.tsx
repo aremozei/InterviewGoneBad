@@ -19,7 +19,7 @@ const HomePage: React.FunctionComponent<RouteComponentProps<any>> = props => {
     const onSearch = async(text) => {
         const listOfRecepies = await Recepies.get("/", {
             params: {
-              apiKey:"API HERE PLEASE",
+              apiKey:"Placeholder2",
               query: text,
               number: 30,
               addRecipeInformation: true
@@ -33,6 +33,7 @@ const HomePage: React.FunctionComponent<RouteComponentProps<any>> = props => {
 
         if(query) {
             setMessage(query);
+            onSearch(query);
         } else {
             setMessage('');
         }
@@ -40,10 +41,12 @@ const HomePage: React.FunctionComponent<RouteComponentProps<any>> = props => {
     
     return (
         <React.Fragment>
-            <SearchBar query= {message} onSearch= {onSearch} />
+            <SearchBar query={message} onSearch= {onSearch} />
             <CardList results= {recipes} />
         </React.Fragment>
     );
 }
 
 export default withRouter(HomePage);
+
+//with router for the query params on the url, todo use effect on the other component to check the change and execute the query

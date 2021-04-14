@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ISearchBar from '../../interfaces/Searchbar'
+import  './SearchBar.css'
 
 const SearchBar: React.FunctionComponent<ISearchBar> = props => {
 
@@ -31,7 +32,7 @@ const SearchBar: React.FunctionComponent<ISearchBar> = props => {
     }
     
     return(
-        <div>
+        <div className="search-input-container">
             <div className="control">
                 <input
                     onChange= {handleInput} 

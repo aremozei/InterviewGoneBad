@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    flex-shrink: 2;
+    flex-grow: 4;
+    flex-basis: 100px;
+    padding: 5px;
+    border: #5B6882 solid;
+    border-radius: 1.5rem;
+    box-shadow: 5px 10px 10px 10px gainsboro;
+}
+.card-image {
+    align-self: center
+};
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+p {
+    text-align: end;
+    font-size: 14px;
+    font-style: italic;
+}

@@ -5,14 +5,13 @@ import Card from '../Card/Card';
 
 const CardList: React.FunctionComponent<ICardList> = ({results}) => {
     return (
-    <React.Fragment>
-
+    <div className="results-container">
         {results.map((recipe, index) => {
             return( 
                 <Card key={index} recipe={recipe}/>
             )
         })}
-    </React.Fragment> 
+    </div>
     )
 };
 

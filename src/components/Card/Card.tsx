@@ -1,10 +1,9 @@
 import React from 'react';
 import ICard from '../../interfaces/Card';
-// import '.'
+import './Card.css'
 
 const Card: React.FunctionComponent<ICard> = (props) => {
     const { recipe } = props;
-    console.log(props)
 
     return(
         <div className="card">
@@ -18,7 +17,7 @@ const Card: React.FunctionComponent<ICard> = (props) => {
             <div className="card-content">
                 <div className="media">
                     <div className="media-content">
-                        <p className="title is-4">{recipe.title}</p>
+                        <h3 className="title is-4">{recipe.title}</h3>
                         <p className="subtitle is-6">{recipe.sourceName}</p>
                     </div>
                 </div>
